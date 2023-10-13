@@ -7,7 +7,7 @@ module.exports = {
     "plugin:react/jsx-runtime",
     "plugin:no-unsanitized/DOM",
   ],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: ["dist", "coverage", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
   plugins: ["react", "react-hooks", "jsx-a11y"],
   rules: {},
