@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
-    "build": "tsc && vite build",
+    "test": "vitest",
+    "build": "tsc -p tsconfig.build.json && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview --open"
   },
@@ -27,7 +28,13 @@
     "eslint-plugin-no-unsanitized": "^4.0.2",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-vitest": "^0.3.2",
+    "jsdom": "^22.1.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.11"
+    "vite": "^4.4.11",
+    "vitest": "^0.34.6",
+    "@testing-library/react": "^12.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/user-event": "^14.5.1"
   }
 }

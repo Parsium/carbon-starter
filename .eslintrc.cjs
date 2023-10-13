@@ -16,4 +16,11 @@ module.exports = {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["src/**/*.spec.ts*"],
+      plugins: ["vitest"],
+      extends: ["plugin:vitest/recommended"],
+    },
+  ],
 };
