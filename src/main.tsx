@@ -15,5 +15,5 @@ render(
       <App />
     </CarbonProvider>
   </React.StrictMode>,
-  document.getElementById("app")
+  document.getElementById("app"),
 );
