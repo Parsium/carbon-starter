@@ -4,11 +4,19 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:jsx-a11y/recommended",
     "plugin:no-unsanitized/DOM",
   ],
-  ignorePatterns: ["dist", "coverage", ".eslintrc.cjs"],
-  parser: "@typescript-eslint/parser",
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  parserOptions: {
+    ecmaVersion: "latest",
+    ecmaFeature: {
+      jsx: true,
+    },
+    sourceType: "module",
+  },
   plugins: ["react", "react-hooks", "jsx-a11y"],
   rules: {},
   settings: {
@@ -16,11 +24,4 @@ module.exports = {
       version: "detect",
     },
   },
-  overrides: [
-    {
-      files: ["src/**/*.spec.ts*"],
-      plugins: ["vitest"],
-      extends: ["plugin:vitest/recommended"],
-    },
-  ],
 };
