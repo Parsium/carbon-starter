@@ -1,4 +1,5 @@
 /// <reference types="vite/client" />
+/// <reference types="vitest" />
 
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
@@ -9,6 +10,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "~@sage": resolve(__dirname, "./node_modules/@sage/"),
+    },
+  },
+  test: {
+    globals: false,
+    environment: "jsdom",
+    setupFiles: ["setup-tests.ts"],
+    coverage: {
+      provider: "istanbul",
     },
   },
   build: {

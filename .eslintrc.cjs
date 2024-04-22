@@ -24,4 +24,15 @@ module.exports = {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["src/**/*.spec.ts*"],
+      plugins: ["vitest", "testing-library", "jest-dom"],
+      extends: [
+        "plugin:vitest/recommended",
+        "plugin:testing-library/react",
+        "plugin:jest-dom/recommended",
+      ],
+    },
+  ],
 };
