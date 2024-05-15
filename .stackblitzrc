@@ -1,0 +1,4 @@
+{
+  "installDependencies": false,
+  "startCommand": "npm update carbon-react && npm install && npm start"
+}
