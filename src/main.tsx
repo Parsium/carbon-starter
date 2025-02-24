@@ -1,5 +1,4 @@
-import React from "react";
-import { render } from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import CarbonProvider from "carbon-react/lib/components/carbon-provider";
 import sageTheme from "carbon-react/lib/style/themes/sage";
@@ -8,12 +7,13 @@ import "carbon-react/lib/style/fonts.css";
 
 import App from "./App";
 
-render(
-  <React.StrictMode>
+const root = createRoot(document.getElementById("app")!);
+
+root.render(
+  <>
     <GlobalStyle />
     <CarbonProvider validationRedesignOptIn theme={sageTheme}>
       <App />
     </CarbonProvider>
-  </React.StrictMode>,
-  document.getElementById("app"),
+  </>
 );

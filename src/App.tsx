@@ -16,7 +16,7 @@ const App = () => {
       <Message variant="warning">
         <Typography variant="b" m={0}>
           Edit the <code>package.json</code> file manually and reinstall to
-          update the versions of carbon-react and @sage/design-tokens as needed.
+          update the versions of any packages if needed.
         </Typography>
       </Message>
     </Box>
