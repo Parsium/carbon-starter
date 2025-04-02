@@ -13,10 +13,10 @@
   },
   "dependencies": {
     "@sage/design-tokens": "4.35.0",
-    "carbon-react": "151.0.0",
+    "carbon-react": "153.0.0",
     "react": "^17.0 || ^18.0",
     "react-dom": "^17.0 || ^18.0",
-    "styled-components": "^4.4.1"
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
