@@ -6,8 +6,9 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended-legacy",
     "plugin:jsx-a11y/recommended",
-    "plugin:no-unsanitized/DOM",
+    "plugin:no-unsanitized/recommended-legacy",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: {
@@ -26,10 +27,10 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["src/**/*.spec.ts*"],
-      plugins: ["vitest", "testing-library", "jest-dom"],
+      files: ["**/*.@(test|spec).*"],
+      plugins: ["@vitest", "testing-library", "jest-dom"],
       extends: [
-        "plugin:vitest/recommended",
+        "plugin:@vitest/legacy-recommended",
         "plugin:testing-library/react",
         "plugin:jest-dom/recommended",
       ],
