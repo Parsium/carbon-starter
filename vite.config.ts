@@ -1,5 +1,5 @@
 /// <reference types="vite/client" />
-/// <reference types="vitest" />
+/// <reference types="vitest/config" />
 
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "~@sage": resolve(__dirname, "./node_modules/@sage/"),
+      "~@sage": resolve(import.meta.dirname, "./node_modules/@sage/"),
     },
   },
   test: {
@@ -18,6 +18,7 @@ export default defineConfig({
     setupFiles: ["setup-tests.ts"],
     coverage: {
       provider: "istanbul",
+      enabled: true,
     },
   },
 });
