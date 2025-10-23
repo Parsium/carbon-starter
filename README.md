@@ -2,6 +2,8 @@
 
 Starter template for creating a new [Carbon](https://carbon.sage.com/) app, powered by [Vite](https://vitejs.dev/). Also includes some ESLint rules and a test setup to aid development.
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/Parsium/carbon-starter)
+
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
