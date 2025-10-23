@@ -22,6 +22,9 @@ export default defineConfig(
       },
     },
     extends: [tseslint.configs.recommendedTypeChecked],
+    rules: {
+      "@typescript-eslint/no-deprecated": "error",
+    },
   },
   {
     files: ["**/*.@(js|jsx|ts|tsx)"],
