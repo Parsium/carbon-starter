@@ -1,5 +1,6 @@
 import { createRoot } from "react-dom/client";
 
+import TokensWrapper from "carbon-react/lib/components/tokens-wrapper";
 import CarbonProvider from "carbon-react/lib/components/carbon-provider";
 import sageTheme from "carbon-react/lib/style/themes/sage";
 import GlobalStyle from "carbon-react/lib/style/global-style";
@@ -12,8 +13,10 @@ const root = createRoot(document.getElementById("app")!);
 root.render(
   <>
     <GlobalStyle />
-    <CarbonProvider validationRedesignOptIn theme={sageTheme}>
-      <App />
-    </CarbonProvider>
-  </>
+    <TokensWrapper>
+      <CarbonProvider validationRedesignOptIn theme={sageTheme}>
+        <App />
+      </CarbonProvider>
+    </TokensWrapper>
+  </>,
 );
